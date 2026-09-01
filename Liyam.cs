@@ -10,6 +10,7 @@ namespace Summary.Liyam
         internal class Workflows
         {
             internal const string Done = "Done";
+            public const string NotExist = "Not Exist";
         }
 
         internal class Public
@@ -29,6 +30,8 @@ namespace Summary.Liyam
             public const string DOfCreateIdentity = "این رویداد زمانی فراخوانی میشود که هویتی در حسابداری لیام به صف همگام سازی ارسال شود.";
             public const string SOfUpdateIdentity = "رویداد ویرایش هویت";
             public const string DOfUpdateIdentity = "این رویداد زمانی فراخوانی میشود که هویتی در حسابداری لیام به صف همگام سازی ارسال شود.";
+            public const string SOfCreatePerson = "ایجاد شخص جدید";
+            public const string DOfCreatePerson = "فعالیتی جهت ایجاد شخص جدید در حسابداری لیام";
         }
     }
 }

@@ -1,0 +1,13 @@
+@model ActivityViewModel<Summary.Liyam.Workflows.Task.Person.Create.CreatePersonInLiyamTask>
+@using Core.Workflows.Helpers
+@using Core.Workflows.ViewModels
+@using Summary.Liyam
+
+<header>
+    <h4>
+        @Model.Activity.GetTitleOrDefault(() => T[Liyam.Localize.SOfCreatePerson])
+    </h4>
+    <em>
+        &quot;Liyam - Create Person&quot;
+    </em>
+</header>

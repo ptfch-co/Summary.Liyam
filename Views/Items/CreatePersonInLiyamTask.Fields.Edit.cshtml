@@ -1,0 +1,185 @@
+@model Summary.Liyam.Workflows.Task.Person.Create.CreatePersonInLiyamViewModel
+
+<div class="row">
+  <div class="col-md-4">
+    <div class="form-group">
+      <label asp-for="Title">
+        عنوان
+      </label>
+      <input type="text" asp-for="Title" class="form-control" />
+      <span class="hint">
+        از طریق این فیلد می‌توانید عنوان شخص در حسابداری را وارد نمایید.
+      </span>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="form-group">
+      <label asp-for="Group">
+        گروه
+      </label>
+      <input type="text" asp-for="Group" class="form-control" />
+      <span class="hint">
+        از طریق این فیلد می‌توانید گروه تفصیلی شخص را وارد نمایید.
+      </span>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="form-group">
+      <label asp-for="Region">
+        منطقه
+      </label>
+      <input type="text" asp-for="Region" class="form-control" />
+      <span class="hint">
+        از طریق این فیلد می‌توانید منطقه/مسیر شخص را وارد نمایید.
+      </span>
+    </div>
+  </div>
+</div>
+<fieldset class="person-info">
+  <legend>اطلاعات شخص</legend>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="form-group">
+        <label asp-for="FirstName">
+          نام<span class="text-danger">*</span>
+        </label>
+        <input type="text" asp-for="FirstName" class="form-control" />
+        <span class="hint">
+          از طریق این فیلد می‌توانید نام شخص را وارد نمایید.
+        </span>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <label asp-for="LastName">
+          نام خانوادگی
+        </label>
+        <input type="text" asp-for="LastName" class="form-control" />
+        <span class="hint">
+          از طریق این فیلد می‌توانید نام خانوادگی شخص را وارد نمایید.
+        </span>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <label asp-for="NationalCode">
+          کد ملی
+        </label>
+        <input type="text" asp-for="NationalCode" class="form-control" />
+        <span class="hint">
+          از طریق این فیلد می‌توانید کد ملی را وارد نمایید.
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="form-group">
+        <label asp-for="EconomicCode">
+          کد اقتصادی
+        </label>
+        <input type="text" asp-for="EconomicCode" class="form-control" />
+        <span class="hint">
+          از طریق این فیلد می‌توانید کد اقتصادی شخص را وارد نمایید.
+        </span>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <label asp-for="City">
+          شهر
+        </label>
+        <input type="text" asp-for="City" class="form-control" />
+        <span class="hint">
+          از طریق این فیلد می‌توانید شهر را وارد نمایید.
+        </span>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <label asp-for="State">
+          استان
+        </label>
+        <input type="text" asp-for="State" class="form-control" />
+        <span class="hint">
+          از طریق این فیلد می‌توانید استان را وارد نمایید.
+        </span>
+      </div>
+    </div>
+  </div>
+</fieldset>
+<fieldset class="contact-info">
+  <legend>اطلاعات تماس</legend>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="form-group">
+        <label asp-for="Address">
+          آدرس
+        </label>
+        <input type="text" asp-for="Address" class="form-control" />
+        <span class="hint">
+          از طریق این فیلد می‌توانید آدرس شخص را وارد نمایید.
+        </span>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <label asp-for="Phone">
+          تلفن
+        </label>
+        <input type="text" asp-for="Phone" class="form-control" />
+        <span class="hint">
+          از طریق این فیلد می‌توانید شماره تلفن ثابت شخص را وارد نمایید.
+        </span>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <label asp-for="Mobile">
+          موبایل
+        </label>
+        <input type="text" asp-for="Mobile" class="form-control" />
+        <span class="hint">
+          از طریق این فیلد می‌توانید شماره موبایل شخص را وارد نمایید.
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="form-group">
+        <label asp-for="Email">
+          ایمیل
+        </label>
+        <input type="text" asp-for="Email" class="form-control" />
+        <span class="hint">
+          از طریق این فیلد می‌توانید آدرس ایمیل شخص را وارد نمایید.
+        </span>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <label asp-for="PostalCode">
+          کد پستی
+        </label>
+        <input type="text" asp-for="PostalCode" class="form-control" />
+        <span class="hint">
+          از طریق این فیلد می‌توانید کد پستی شخص را وارد نمایید.
+        </span>
+      </div>
+    </div>
+  </div>
+</fieldset>
+<div class="row">
+  <div class="col-md-12">
+    <div class="form-group">
+      <label asp-for="Description">
+        توضیحات
+      </label>
+      <textarea asp-for="Description" class="form-control"></textarea>
+      <span class="hint">
+        از طریق این فیلد می‌توانید توضیحات تکمیلی درباره شخص را وارد نمایید.
+      </span>
+    </div>
+  </div>
+</div>

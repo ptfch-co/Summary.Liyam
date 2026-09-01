@@ -175,4 +175,21 @@ namespace Summary.Liyam
         public object CostMode { get; set; }
     }
 
+    public class DetailGroupLookupItem
+    {
+        public string Text { get; set; }
+        public int Value { get; set; }
+    }
+
+    public class LookupItem
+    {
+        public int Id { get; set; }
+        public string Title { get; set; }
+    }
+
+    public class ResponseTokenInfo
+    {
+        public string Access_Token { get; set; }
+    }
+
 }

@@ -12,6 +12,8 @@ namespace Summary.Liyam
     using Summary.Liyam.Workflows.Event.Identity.Update;
     using Summary.Liyam.Workflows.Event.Product.Create;
     using Summary.Liyam.Workflows.Event.Product.Update;
+    using Summary.Liyam.Workflows.Task.Person.Create;
+    using Summary.Liyam.Services;
 
     [Feature(Liyam.Features.Liyam)]
     public class Startup : StartupBase
@@ -20,6 +22,8 @@ namespace Summary.Liyam
         {
             services.AddScoped<INavigationProvider, Menu>();
             services.AddScoped<IPermissionProvider, Permissions>();
+            services.AddScoped<IPersonService, PersonService>();
+            
             services.AddScoped<IDisplayDriver<ISite>, LiyamSettingsDisplayDriver>();
             services.AddTransient<IConfigureOptions<LiyamSettings>, LiyamSettingsConfiguration>();
 
@@ -28,6 +32,8 @@ namespace Summary.Liyam
 
             services.AddActivity<CreateIdentityInLiyamEvent, CreateIdentityInLiyamDisplay>();
             services.AddActivity<UpdateIdentityInLiyamEvent, UpdateIdentityInLiyamDisplay>();
+
+            services.AddActivity<CreatePersonInLiyamTask, CreatePersonInLiyamDisplay>();
         }
     }
 }

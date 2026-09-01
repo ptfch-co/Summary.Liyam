@@ -14,7 +14,10 @@ namespace Summary.Liyam
 
     public class LiyamSettings
     {
-        public string API { get; set; }
+        public string ApiAddress { get; set; }
+        public string Username { get; set; }
+        public string Password { get; set; }
+        public string AppKey { get; set; }
     }
 
     public class LiyamSettingsDisplayDriver : SectionDisplayDriver<ISite,
@@ -47,7 +50,10 @@ namespace Summary.Liyam
 
             var init = Initialize<LiyamSettings>("LiyamSettings_Edit", model =>
             {
-                model.API = settings.API;
+                model.ApiAddress = settings.ApiAddress;
+                model.Username = settings.Username;
+                model.Password = settings.Password;
+                model.AppKey = settings.AppKey;
             });
             return init.Location("Content:5").OnGroup("Liyam");
         }
@@ -84,7 +90,10 @@ namespace Summary.Liyam
         public void Configure(LiyamSettings options)
         {
             var settings = _site.GetSiteSettingsAsync().GetAwaiter().GetResult().As<LiyamSettings>();
-            options.API = settings.API;
+            options.ApiAddress = settings.ApiAddress;
+            options.Username = settings.Username;
+            options.Password = settings.Password;
+            options.AppKey = settings.AppKey;
         }
     }
 }
